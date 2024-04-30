@@ -50,7 +50,7 @@ pip install -e .
 sh ray_patch.sh
 ```
 
-make sure you have installed correct version of `jax` and `jaxlib`, recommanded version: `jax==0.4.12, jaxlib==0.4.12`
+make sure you have installed correct version of `jax` and `jaxlib`, recommended version: `jax==0.4.12, jaxlib==0.4.12`
 ## Run Training
 
 ```
