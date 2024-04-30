@@ -15,7 +15,6 @@ forums about any updates as they become available.
 - [Run Evaluation](#run-evaluation)
 - [Code Structure](#code-structure)
 - [How to Guide](#how-to-guide)
-  - [Make submission](#make-submission)
   - [Visualization](#visualization)
   - [Logging](#logging)
 - [Identified Issues with Ray 2.6.1](#identified-issues-with-ray-2.6.1)
@@ -27,26 +26,11 @@ validation scenarios that your submission will be evaluated on during developmen
 
 | Substrate | Scenarios |
 | --------- | --------- |
-| allelopathic_harvest__open | allelopathic_harvest__open_0 |
-| | allelopathic_harvest__open_1 |
-| | allelopathic_harvest__open_2 |
-| clean_up | clean_up_2|
-| | clean_up_3 |
-| | clean_up_4 |
-| | clean_up_5 |
-| | clean_up_6 |
-| | clean_up_7 |
-| | clean_up_8 |
-| prisoners_dilemma_in_the_matrix__arena | prisoners_dilemma_in_the_matrix__arena_0 |
-| | prisoners_dilemma_in_the_matrix__arena_1 |
-| | prisoners_dilemma_in_the_matrix__arena_2 |
-| | prisoners_dilemma_in_the_matrix__arena_3 |
-| | prisoners_dilemma_in_the_matrix__arena_4 |
-| | prisoners_dilemma_in_the_matrix__arena_5 |
-| territory__rooms | territory__rooms_0 |
-| | territory__rooms_1 |
-| | territory__rooms_2 |
-| | territory__rooms_3 |
+| clean_up | clean_up_7|
+| prisoners_dilemma_in_the_matrix__repeated | prisoners_dilemma_in_the_matrix__repeated_0 |
+| | prisoners_dilemma_in_the_matrix__repeated_1 |
+| | prisoners_dilemma_in_the_matrix__repeated_2 |
+| | prisoners_dilemma_in_the_matrix__repeated_3 |
 
 ## Installation Guidelines
 
@@ -66,11 +50,7 @@ pip install -e .
 sh ray_patch.sh
 ```
 
-### Google Cloud Platform Setup
-
-Coming Soon!
-
-
+make sure you have installed correct version of `jax` and `jaxlib`, recommanded version: `jax==0.4.12, jaxlib==0.4.12`
 ## Run Training
 
 ```
@@ -104,6 +84,7 @@ OPTIONS:
 > For torch backend, you may need to prepend the above command with CUDA_VISIBLE_DEVICE=[DEVICE IDs]
 if your algorithm does not seem to find GPU when enabled.
 
+*We recommend to use torch backend.*
 ## Run Evaluation
 
 ```
@@ -143,14 +124,6 @@ OPTIONS:
 ```
 
 ## How to Guide
-
-
-### Make Submission
----
-The trained models will be available in the results folder configured by you.
-Please refer to the guidelines on AICrowd [submision-starter-kit](https://gitlab.aicrowd.com/aicrowd/challenges/meltingpot-2023/meltingpot-2023-starter-kit) to make a
-submission using the trained checkpoints.
-
 ### Visualization
 ---
 #### How to render trained models?
