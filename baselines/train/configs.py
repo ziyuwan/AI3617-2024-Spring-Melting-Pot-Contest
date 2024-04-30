@@ -3,26 +3,11 @@ from ray.rllib.policy import policy
 from baselines.train import make_envs
 
 SUPPORTED_SCENARIOS = [
-    'allelopathic_harvest__open_0',
-    'allelopathic_harvest__open_1',
-    'allelopathic_harvest__open_2',
-    'clean_up_2',
-    'clean_up_3',
-    'clean_up_4',
-    'clean_up_5',
-    'clean_up_6',
     'clean_up_7',
-    'clean_up_8',
-    'prisoners_dilemma_in_the_matrix__arena_0',
-    'prisoners_dilemma_in_the_matrix__arena_1',
-    'prisoners_dilemma_in_the_matrix__arena_2',
-    'prisoners_dilemma_in_the_matrix__arena_3',
-    'prisoners_dilemma_in_the_matrix__arena_4',
-    'prisoners_dilemma_in_the_matrix__arena_5',
-    'territory__rooms_0',
-    'territory__rooms_1',
-    'territory__rooms_2',
-    'territory__rooms_3',
+    'prisoners_dilemma_in_the_matrix__repeated_0',
+    'prisoners_dilemma_in_the_matrix__repeated_1',
+    'prisoners_dilemma_in_the_matrix__repeated_2',
+    'prisoners_dilemma_in_the_matrix__repeated_3',
 ]
 
 IGNORE_KEYS = ['WORLD.RGB', 'INTERACTION_INVENTORIES', 'NUM_OTHERS_WHO_CLEANED_THIS_STEP']
@@ -30,17 +15,13 @@ IGNORE_KEYS = ['WORLD.RGB', 'INTERACTION_INVENTORIES', 'NUM_OTHERS_WHO_CLEANED_T
 
 def get_experiment_config(args, default_config):
     
-    if args.exp == 'pd_arena':
-        substrate_name = "prisoners_dilemma_in_the_matrix__arena"
-    elif args.exp == 'al_harvest':
-        substrate_name = "allelopathic_harvest__open"
+    if args.exp == 'pd_matrix':
+        substrate_name = "prisoners_dilemma_in_the_matrix__repeated"
     elif args.exp == 'clean_up':
         substrate_name = "clean_up"
-    elif args.exp == 'territory_rooms':
-        substrate_name = "territory__rooms"
     else:
-        raise Exception("Please set --exp to be one of ['pd_arena', 'al_harvest', 'clean_up', \
-                        'territory_rooms']. Other substrates are not supported.")
+        raise Exception("Please set --exp to be one of ['pd_matrix', 'clean_up', \
+                        ]. Other substrates are not supported.")
 
     # Fetch player roles
     player_roles = substrate.get_config(substrate_name).default_player_roles

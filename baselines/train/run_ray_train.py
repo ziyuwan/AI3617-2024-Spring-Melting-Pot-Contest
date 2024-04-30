@@ -53,8 +53,8 @@ def get_cli_args():
   parser.add_argument(
       "--exp",
       type=str,
-      choices = ['pd_arena','al_harvest','clean_up','territory_rooms'],
-      default="pd_arena",
+      choices = ['pd_matrix','clean_up'],
+      default="pd_matrix",
       help="Name of the substrate to run",
   )
   parser.add_argument(
