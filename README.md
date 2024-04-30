@@ -1,13 +1,5 @@
-# Melting Pot Contest @ Neurips 2023
+# Melting Pot Contest @ AI3617-2024-Spring
 Official Repository for Melting Pot Contest Experiments
-
->**NOTE:** This repository provides a basic startup code for training RLLIB agents on Melting Pot.
-We plan to add additional support including more examples,
-benchmarked configs and GCP compute setup over the next couple of weeks. We will
-also make any necessary updates based on feedback from participants. Hence, it is recommended
-to sync up your fork every few days for next couple of weeks. We will post in discussion
-forums about any updates as they become available.
-
 # Table of Contents
 - [Substrates and Scenarios](#substrates-and-scenarios)
 - [Installation Guidelines](#installation-guidelines)
