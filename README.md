@@ -184,3 +184,15 @@ In your Python library folder, in the file ray/rllib/models/torch/complex_input_
 ```python
 self.num_outputs = concat_size if not self.post_fc_stack else self.post_fc_stack.num_outputs
 ```
+
+# Submission Guide of `Clean_up`
+1. Submit on Canvas
+2. Put your policy and model weights in `baselines`.
+3. Upload your `baselines` directory with a README about how to evaluate your policy.
+4. Compress your `baselines` and rename it as `clean_up-{student_name}-{student_id}.zip`
+
+Other information:
+1. For the evaluation guide, please see the evaluation section.
+2. We'll use `baselines/evaluate.py` to test your model. So you should not modify this file.
+If you want to implement a rule-based policy, you can modify `baselines/customs
+/policies.py` while making no change in each function's inputs. (If it's necessary for you, you can contact TAs.)
