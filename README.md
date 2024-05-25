@@ -10,6 +10,8 @@ Official Repository for Melting Pot Contest Experiments
   - [Visualization](#visualization)
   - [Logging](#logging)
 - [Identified Issues with Ray 2.6.1](#identified-issues-with-ray-2.6.1)
+- [Submission Guide](#submission-guide-of-clean_up)
+  
 
 ## Substrates and Scenarios
 
@@ -185,7 +187,7 @@ In your Python library folder, in the file ray/rllib/models/torch/complex_input_
 self.num_outputs = concat_size if not self.post_fc_stack else self.post_fc_stack.num_outputs
 ```
 
-# Submission Guide of `Clean_up`
+# Submission Guide of Clean_up
 1. Submit on Canvas
 2. Put your policy and model weights in `baselines`.
 3. Upload your `baselines` directory with a README about how to evaluate your policy.
