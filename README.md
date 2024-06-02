@@ -190,8 +190,8 @@ self.num_outputs = concat_size if not self.post_fc_stack else self.post_fc_stack
 # Submission Guide of Clean_up
 1. Submit on Canvas
 2. Put your policy and model weights in `baselines`.
-3. Upload your `baselines` directory with a README about how to evaluate your policy.
-4. Compress your `baselines` and rename it as `clean_up-{student_name}-{student_id}.zip`
+3. Upload your `baselines` directory with a README about how to evaluate your policy and your results.
+4. put `baselines` in `clean_up` of your entire submission directory.
 
 Other information:
 1. For the evaluation guide, please see the evaluation section.
